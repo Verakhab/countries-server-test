@@ -1,1 +1,1 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }], "public": true }
+{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }], "public": true, "buildCommand": "node index.js", "devCommand": "node index.js" }
