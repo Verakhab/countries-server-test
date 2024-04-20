@@ -11,7 +11,7 @@ var corsOptions = {
 }
 
 const app = express();
-// app.use(express.static(path.join(__dirname, './public')))
+app.use(express.static(path.join(__dirname, './public')))
 
 let response_code = new ResponseCodes();
 let server_status = response_code.serverError().status;
