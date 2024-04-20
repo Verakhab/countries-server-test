@@ -1,1 +1,19 @@
-{ "version": 2, "outputDirectory": "public", "rewrites": [{ "source": "/(.*)", "destination": "/api" }], "public": true, "buildCommand": "node ./api/index.js", "devCommand": "node ./api/index.js" }
+{ 
+    "version": 2,
+    "outputDirectory": "public",
+    "builds": [
+        {
+            "src": "./api/index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "rewrites": [
+        { 
+            "source": "/(.*)",
+            "destination": "/api"
+        }
+    ],
+    "public": true,
+    "buildCommand": "node ./api/index.js",
+    "devCommand": "node ./api/index.js"
+}
