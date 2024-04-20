@@ -15,6 +15,7 @@
   "author": "Denis Bakharev",
   "license": "MIT",
   "dependencies": {
+    "@vercel/postgres": "^0.8.0",
     "body-parser": "^1.20.2",
     "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
