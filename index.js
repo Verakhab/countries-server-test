@@ -20,7 +20,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true, parameterLimit: 50000 }));
 
-app.use('/api/country', require('./routes/countries.routes'));
+app.use('/country', require('./routes/countries.routes'));
 
 app.use((err, req, res, next) => {
     if (err) {
