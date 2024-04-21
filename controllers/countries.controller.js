@@ -1,5 +1,5 @@
 const ResponseCodes = require("../utils/response.code");
-const { countries } = require('../utils/country.list')
+const { countries } = require('../utils/countries.list')
 
 let response_code = new ResponseCodes();
 let server_status = response_code.serverError().status;
