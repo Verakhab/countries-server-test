@@ -20,5 +20,4 @@ const verifyUserToken=async ()=>{
 	};
 };
 
-
 export default verifyUserToken;
