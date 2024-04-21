@@ -8,10 +8,13 @@ let success_status = response_code.success().status;
 
 const getCountry = async (req, res) => {
     try {
+        response_code.message = 'Country fetched sucessfully!';
         if (req.query.name) {
             response_code.data = searchCountry(req.query.name);
-        } else return [];
-        response_code.message = 'Country fetched sucessfully!';
+        } else {
+            response_code.data = countries;
+        }
+
         return res.status(success_status).send(response_code.success());
     } catch (error) {
         response_code.message = 'Something went wrong - Please try again.';
