@@ -4,7 +4,18 @@ const { countries } = require('../utils/countries.list');
 
 const searchCountry = (country) => {
     const findCountries = countries.filter(item => {
-        return item.name.replace(/[\\(\\)]/g, '').toLowerCase().startsWith(country.split('-').join(' '));
+        let itemName = '';
+        let countryName = country.split('-').join(' ');
+
+        if (item.name.includes('(')) {
+            itemName = item.name.replace(/[\\(\\)]/g, '');
+        }
+
+        itemName ?
+            itemName = itemName.toLowerCase() :
+            itemName = item.name.toLowerCase();
+
+        return itemName.startsWith(countryName);
     });
 
     findCountries.forEach(findCountry => {
